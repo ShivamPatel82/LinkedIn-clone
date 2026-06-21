@@ -1,0 +1,78 @@
+### Register
+POST http://localhost:3030/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "name"     :"shivam kumar",
+    "username" :"patelji",
+    "email"    :"shivamp@gmail.com",
+    "password" :"S123"
+    
+}
+###   Login
+
+POST http://localhost:3030/login HTTP/1.1
+Content-Type: application/json
+
+{
+     "email"    : "shivamp@gmail.com",
+    "password"  : "S123"
+}
+
+###  User Update
+
+POST http://localhost:3030/user_update HTTP/1.1
+Content-Type: application/json
+
+{
+    "token":"",
+    "name": "",
+    "username":"",
+    "email" : ""
+}
+
+### get_profile
+
+GET http://localhost:3030/get_profile HTTP/1.1
+Content-Type: application/json
+
+{
+  "token": "b2e9a618f0205bea4a9b59f96656fcb3f8417d77d2afe3a04cf7c0d99b5dfcbe"
+}
+
+
+### update profile data
+
+POST http://localhost:3030/update_profile_data HTTP/1.1
+Content-Type: application/json
+
+{
+    "token": "2570c0f1e897042c4fbc3bb5ed9aff8fb40b58f54ef162dcb443153c7fe3caf0",
+    "bio": "Hi i am shivam patel, I am from Bihar",
+    "currentPost": "Software testing",
+    "pastWork":[
+        {
+            "company": "Microsoft",
+            "position": "App devloper",
+            "years": "2+"
+        }
+    ],
+    "education":[
+        {
+            "school": "RGI College,Bhopal",
+            "degree": "B.tech",
+            "fieldOfStudy": "CSE"
+        }
+    ]
+    
+}
+
+###
+
+GET http://localhost:3030/user/get_all_users HTTP/1.1
+Content-Type: application/json
+
+###
+GET http://localhost:3030/user/download_resume HTTP/1.1
+Content-Type: application/json
+
