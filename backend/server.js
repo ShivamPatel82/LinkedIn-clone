@@ -10,7 +10,15 @@ let port=3030;
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://linked-in-clone-lake-omega.vercel.app/"
+    ],
+    credentials: true
+  })
+);
 app.use(express.json());
 
 //db connection
