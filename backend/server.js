@@ -6,7 +6,7 @@ import userRoutes from './routes/user.routes.js';
 import connToDB   from './config/intiDB.js';
 
 dotenv.config();
-let port=3030;  
+const port = process.env.PORT || 3030;  
 
 const app = express();
 
@@ -14,7 +14,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://linked-in-clone-lake-omega.vercel.app/"
+      "https://linked-in-clone-lake-omega.vercel.app"
     ],
     credentials: true
   })
